@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -16,7 +17,28 @@
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-
+<style>
+@media screen and (max-width: 600px) {
+   .fa-bars{
+   display:block;
+   
+   }
+   .nav{
+    
+   display:none;
+   background:#212121;
+   opacity:0.9;
+    margin-top: 10px;
+    width: 80%;
+    position: fixed;
+   }
+}
+@media screen and (min-width: 900px) {
+   .fa-bars{
+   display:none;
+   }
+}
+</style>
 </head>
 <body class="{{body_class}}">
 
@@ -148,7 +170,11 @@
             });
         });
     </script>
-
+<script>
+$('.fa-bars').click(function(event) {
+$('.nav').toggle();
+});
+</script>
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
 
