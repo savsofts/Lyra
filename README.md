@@ -1,3 +1,5 @@
+Forked original lyra theme (https://github.com/TryGhost/Lyra ) to make Responsive Navbar  
+
 # Lyra
 
 A paid-members publication for Ghost. Can be used with no code knowledge required.
